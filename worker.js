@@ -10,6 +10,9 @@ export default {
       const time = Date.now() - startTime
       perf.push(time)
     }
+    
+    console.log(perf)
+    console.log(perf.sort())
  
     return new Response(JSON.stringify({
       target: 'https:/' + pathname + search,
