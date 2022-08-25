@@ -17,8 +17,8 @@ export default {
     return new Response(JSON.stringify({
       target: 'https:/' + pathname + search,
       first: perf[0],
-      min: perf.sort().[0],
-      max: perf.sort().[19],
+      min: perf.sort()[0],
+      max: perf.sort()[19],
       avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
       med: perf.sort()[9],
       p25: perf.sort()[4],
