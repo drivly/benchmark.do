@@ -6,7 +6,7 @@ export default {
     
     for (i = 0; i++; i < 20) {
       const startTime = Date.now()
-      const data = await fetch('https:/' + pathname + search, req))
+      const data = await fetch('https:/' + pathname + search, req)
       perf.push(startTime - Date.now())
     }
  
