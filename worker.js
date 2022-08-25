@@ -4,7 +4,7 @@ export default {
     const { pathname, search } = new URL(req.url)
     let perf = []
     
-    for (let i = 0; i++; i <= 20) {
+    for (let i = 0; i <= 20; i++) {
       const startTime = Date.now()
       const data = await fetch('https:/' + pathname + search, req)
       const time = startTime - Date.now()
