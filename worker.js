@@ -4,7 +4,7 @@ export default {
     const { pathname, search } = new URL(req.url)
     let perf = []
     
-    for (i = 0; i++; i < 20) {
+    for (i = 0; i++; i <= 20) {
       const startTime = Date.now()
       const data = await fetch('https:/' + pathname + search, req)
       perf.push(startTime - Date.now())
@@ -14,8 +14,8 @@ export default {
       target: 'https:/' + pathname + search,
       first: perf[0],
       min: perf.sort()[0],
-      max: perf.sort()[19],
-      avg: perf.reduce((acc, x) => acc + x, 0),
+      max: perf.sort()[20],
+      avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
       med: perf.sort()[10],
       p25: perf.sort()[5],
       p75: perf.sort()[15],
