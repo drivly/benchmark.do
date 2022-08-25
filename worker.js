@@ -14,12 +14,12 @@ export default {
     return new Response(JSON.stringify({
       target: 'https:/' + pathname + search,
       first: perf[0],
-      min: perf.sort()[0],
-      max: perf.sort()[20],
+      min: perf.sort()[20],
+      max: perf.sort()[0],
       avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
       med: perf.sort()[10],
-      p25: perf.sort()[5],
-      p75: perf.sort()[15],
+      p25: perf.sort()[15],
+      p75: perf.sort()[5],
     }, null, 2), { headers: { 'content-type': 'application/json' }})
   }
 }
