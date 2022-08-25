@@ -13,16 +13,18 @@ export default {
     
     console.log(perf)
     console.log(perf.sort())
+    
+    const sorted = perf.sort((a, b) => a - b)
  
     return new Response(JSON.stringify({
       target: 'https:/' + pathname + search,
       first: perf[0],
-      min: perf.sort()[0],
-      max: perf.sort()[19],
+      min: sorted[0],
+      max: sorted[19],
       avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
-      med: perf.sort()[9],
-      p25: perf.sort()[4],
-      p75: perf.sort()[15],
+      med: sorted[9],
+      p25: sorted[4],
+      p75: sorted[15],
     }, null, 2), { headers: { 'content-type': 'application/json' }})
   }
 }
