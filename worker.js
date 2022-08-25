@@ -7,12 +7,9 @@ export default {
     for (let i = 0; i <= 20; i++) {
       const startTime = Date.now()
       const data = await fetch('https:/' + pathname + search, req)
-      const time = startTime - Date.now()
-      console.log(time)
+      const time = Date.now() - startTime
       perf.push(time)
     }
-    
-    console.log(perf)
  
     return new Response(JSON.stringify({
       target: 'https:/' + pathname + search,
