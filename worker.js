@@ -16,7 +16,7 @@ export default {
       first: perf[0],
       min: perf.sort()[0],
       max: perf.sort()[20],
-      avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
+      avg: (perf.reduce((acc, x) => acc + x, 0)) / 21,
       med: perf.sort()[10],
       p25: perf.sort()[5],
       p75: perf.sort()[15],
