@@ -1,0 +1,5 @@
+name = "benchmark-do"
+account_id = "b6641681fe423910342b9ffa1364c76d"
+route = { pattern = "benchmark.do/*", zone_id = "171b284b14f91efa2b969dd41cbf18ee" }
+main = "worker.js"
+compatibility_date = "2022-08-23"
