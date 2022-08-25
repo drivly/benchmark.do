@@ -1,7 +1,7 @@
 export default {
   fetch: async req => {
     
-    const { pathname } = new URL(req.url)
+    const { pathname, search } = new URL(req.url)
     let perf = []
     
     for (i = 0, i++ i < 20) {
