@@ -12,9 +12,9 @@ export default {
     }
     
     console.log(perf)
-    console.log(perf.sort())
     
     const sorted = perf.sort((a, b) => a - b)
+    console.log(sorted)
  
     return new Response(JSON.stringify({
       target: 'https:/' + pathname + search,
