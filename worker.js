@@ -5,9 +5,9 @@ export default {
     let perf = []
     
     for (let i = 0; i < 20; i++) {
-      const startTime = Date.UTC()
+      const startTime = Date.now()
       const data = await fetch('https:/' + pathname + search, req)
-      const time = Date.UTC() - startTime
+      const time = Date.now() - startTime
       perf.push(time)
     }
     
